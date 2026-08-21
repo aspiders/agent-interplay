@@ -41,14 +41,14 @@ python main.py
 把结果推送到手机（需要手机装 ntfy 应用并订阅 topic）：
 
 ```powershell
-# 全流程跑完并把精简版报告推到手机（topic 默认 zhenghz-aspider）
+# 全流程跑完并把精简版报告推到手机（topic 默认 zhenghz-sport）
 python main.py --notify
 ```
 
 推送属性：
 - **标题**：`🏀 体育早报 · 08-15 13:08`
 - **正文**：精简版（每条新闻：标题 + 一句话总结 + 评分星级），约 1.7KB，适配 ntfy 公共服务器单条 4KB 上限
-- **配置**：`.env` 里 `NTFY_SERVER`（默认 `https://ntfy.sh`）、`NTFY_TOPIC`（默认 `zhenghz-aspider`）
+- **配置**：`.env` 里 `NTFY_SERVER`（默认 `https://ntfy.sh`）、`NTFY_TOPIC`（默认 `zhenghz-sport`）
 
 ## 定时推送（Windows 任务计划）
 
@@ -116,7 +116,7 @@ journalctl -u sports-news.service -n 30   # 看日志
 | `TOP_N` | `10` | 最热新闻条数 |
 | `CANDIDATE_LIMIT` | `30` | 喂给 AgentA 的候选新闻上限 |
 | `NTFY_SERVER` | `https://ntfy.sh` | ntfy 服务器（自建/其他服务器时改） |
-| `NTFY_TOPIC` | `zhenghz-aspider` | ntfy 订阅 topic（手机需已订阅） |
+| `NTFY_TOPIC` | `zhenghz-sport` | ntfy 订阅 topic（手机需已订阅） |
 | `RSS_FEEDS` | （空） | 覆盖 RSS 源列表，格式 `名字\|url,名字\|url`；不设则用 `config.py` 的 `FEEDS`（大陆服务器配中文源用） |
 
 RSS 源在 `config.py` 的 `FEEDS` 里配置，可自由增删（BBC Sport / ESPN / Guardian / Google News 等免费源）；

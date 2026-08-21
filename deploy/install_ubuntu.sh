@@ -93,7 +93,7 @@ if [[ ! -f "$DIR/.env" ]]; then
   echo "    已从 .env.example 生成 $DIR/.env，请编辑填入必填项后重跑本脚本："
   echo "      sudo vim $DIR/.env"
   echo "        必填：DEEPSEEK_API_KEY=sk-...（到 platform.deepseek.com 申请）"
-  echo "        确认：NTFY_TOPIC=zhenghz-aspider（手机已订阅的 topic）"
+  echo "        确认：NTFY_TOPIC=zhenghz-sport（手机已订阅的 topic）"
   echo "        可选：RSS_FEEDS=ESPN|https://www.espn.com/espn/rss/news,网易体育|https://sports.163.com/special/00051K8P/rss_newstop.xml"
   echo "              （大陆服务器海外源多不可达，换成在服务器上实测可达的中文源）"
   echo ""

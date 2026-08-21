@@ -38,7 +38,7 @@ Register-ScheduledTask -TaskName $TaskName -Action $Action -Trigger $Trigger -Pr
 
 Write-Host "已注册任务：$TaskName"
 Write-Host "  → 每天 $Time 运行：$Python $Script --notify"
-Write-Host "  → 结果推送到 ntfy topic：zhenghz-aspider（或 .env 里的 NTFY_TOPIC）"
+Write-Host "  → 结果推送到 ntfy topic：zhenghz-sport（或 .env 里的 NTFY_TOPIC）"
 Write-Host "  → 前提：到点电脑需开机且你已登录（任务以交互方式运行）"
 Write-Host ""
 Write-Host "查看/改时间：Get-ScheduledTask $TaskName | Get-ScheduledTaskInfo ；重跑本脚本即可改时间"

@@ -31,7 +31,7 @@ FEED_TIMEOUT = int(os.getenv("FEED_TIMEOUT", "15"))
 # ntfy 服务器（默认公共服务器 ntfy.sh；若用的是自建/其他服务器，改成对应地址）
 NTFY_SERVER = os.getenv("NTFY_SERVER", "https://ntfy.sh")
 # 已存在的订阅 topic
-NTFY_TOPIC = os.getenv("NTFY_TOPIC", "zhenghz-aspider")
+NTFY_TOPIC = os.getenv("NTFY_TOPIC", "zhenghz-sport")
 NTFY_TIMEOUT = int(os.getenv("NTFY_TIMEOUT", "20"))
 
 # 免费 RSS 体育新闻源：(来源名, URL)。可自行增删。
