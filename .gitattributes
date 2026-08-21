@@ -1,0 +1,4 @@
+# 强制部署相关脚本用 LF：CRLF 会让 Linux 上的 bash / systemd 解析报错
+*.sh text eol=lf
+*.service text eol=lf
+*.timer text eol=lf

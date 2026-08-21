@@ -1,0 +1,12 @@
+[Unit]
+Description=Run sports news pipeline daily
+
+[Timer]
+OnCalendar=*-*-* 08:00:00
+# 错过（如服务器在触发点关机）则下次开机补跑
+Persistent=true
+# 错峰 2 分钟，避免整点请求拥塞
+RandomizedDelaySec=120
+
+[Install]
+WantedBy=timers.target

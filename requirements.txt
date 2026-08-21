@@ -1,0 +1,9 @@
+# LangChain + DeepSeek (OpenAI 兼容)
+langchain>=1.0.0,<2.0.0
+langchain-openai>=1.5.1,<2.0.0
+
+# RSS 解析
+feedparser>=6.0.11
+
+# 读取 .env
+python-dotenv>=1.0.1

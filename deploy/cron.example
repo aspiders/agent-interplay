@@ -1,0 +1,4 @@
+# 备选：不想用 systemd 时用 cron 定时（服务器已设 Asia/Shanghai 时区）。
+# 用法：crontab -e 粘贴下面这行（行首时间按需改）。
+# 日志追加到 /var/log/sports-news.log。
+0 8 * * * cd /opt/sports-news && .venv/bin/python main.py --notify >> /var/log/sports-news.log 2>&1

@@ -1,0 +1,17 @@
+[Unit]
+Description=Sports news dual-agent pipeline (notify)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=sports
+WorkingDirectory=/opt/sports-news
+ExecStart=/opt/sports-news/.venv/bin/python /opt/sports-news/main.py --notify
+StandardOutput=journal
+StandardError=journal
+# 最长允许 15 分钟，防止异常卡死
+TimeoutStartSec=900
+
+[Install]
+WantedBy=multi-user.target
