@@ -78,7 +78,8 @@ if [[ ! -d "$DIR" ]]; then
   chown -R "$RUN_USER":"$RUN_USER" "$DIR"
 else
   echo "    目录已存在，改为 git pull"
-  git -C "$DIR" pull
+  # 用运行用户身份 pull（仓库属主已是 $RUN_USER，root 跑会触发 dubious ownership）
+  sudo -u "$RUN_USER" git -C "$DIR" pull
   chown -R "$RUN_USER":"$RUN_USER" "$DIR"
 fi
 
